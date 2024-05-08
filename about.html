@@ -1,0 +1,187 @@
+<style>
+  h1{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    }
+   h2 {text-align: Center;}
+   Body {background-image: url("https://wallpapers.com/images/hd/light-purple-solid-background-74aptomj94cq7wey.jpg");}
+
+  @import "compass/css3";
+
+  @import url(https://fonts.googleapis.com/css?family=Merriweather);
+  $red: #e74c3c;
+
+  *, 
+  *:before, 
+  *:after {
+     @include box-sizing(border-box); 
+  }
+
+  html, body {
+    font-family: 'Merriweather', sans-serif;
+    padding: 1em;
+  }
+
+  h1 {
+     text-align: center;
+     color: black;
+     @include text-shadow(1px 1px 0 rgba(white, 1));
+  }
+
+  form {
+     max-width: 600px;
+     text-align: center;
+     margin: 20px auto;
+
+    input, textarea {
+       border:0; outline:0;
+       padding: 1em;
+       @include border-radius(8px);
+       display: block;
+       width: 100%;
+       margin-top: 1em;
+       font-family: 'Merriweather', sans-serif;
+       @include box-shadow(0 1px 1px rgba(black, 0.1));
+       resize: none;
+
+      &:focus {
+         @include box-shadow(0 0px 2px rgba($red, 1)!important);
+      }
+    }
+
+    #input-submit {
+       color: white; 
+       background: $red;
+       cursor: pointer;
+
+      &:hover {
+         @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+      }
+    }
+
+    textarea {
+        height: 126px;
+    }
+  }
+
+
+  .half {
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
+  }
+
+  .right { width: 50%; }
+
+  .left {
+       margin-right: 2%; 
+  }
+
+
+  @media (max-width: 480px) {
+    .half {
+       width: 100%; 
+       float: none;
+       margin-bottom: 0; 
+    }
+  }
+
+
+  /* Clearfix */
+  .cf:before,
+  .cf:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+
+  .cf:after {
+      clear: both;
+  }
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .project {
+      width: calc(25% - 40px);
+      margin: 20px;
+      text-align: center;
+    }
+    .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .project-title {
+      margin-top: 10px;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: plum;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111;
+    }
+  
+</style>
+    </head>
+
+  <body>
+    <ul class="nav-bar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+
+    <h1>Hi There!! I'm Valeria</h1>
+    <h2>Things about me</h2>
+    <h3 align="left">Who am I?</h3>
+    <p align="left">My name is Valeria Barrios I was born in venezuela and I lived there fo about 5 years, I moved to the united states when I was 6 ywars old and I'm still living here, I'm 16 years old and I'm a junior in dewitt clinton high school. I'm not really good at communicating with new people, I'm very good in science topics.</p>
+    
+    <h3 align="right">My Hobbies</h3>
+    <p align="right">My hobbies are writting and reading, I specially enjopy reading romance and agnst books. What I like to write is poems, poems about love, agnst, desired, and more. I find peace in these hobbies, makes me feel calm and relaxed, even if im just communicating with my notebook through writing </p>
+      
+    <h1>Email Me If You Have More Questions About My Portfolio!!</h1>
+    <form class="cf">
+      <div class="half left cf">
+        <input type="text" id="input-name" placeholder="Name">
+        <input type="email" id="input-email" placeholder="Email address">
+        <input type="text" id="input-subject" placeholder="Subject">
+      </div>
+      <div class="half right cf">
+        <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+      </div>  
+      <input type="submit" value="Submit" id="input-submit">
+    </form>
+     
+
+    
+  </body>
